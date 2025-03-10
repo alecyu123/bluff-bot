@@ -77,7 +77,7 @@ if __name__ == '__main__':
         '--models',
         nargs='*',
         default=[
-            'experiments/blackjack_dqn_result/model.pth',
+            'experiments\leduc_holdem_dqn_result\model.pth', 
             'random',
         ],
     )

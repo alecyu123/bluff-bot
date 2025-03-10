@@ -35,7 +35,7 @@ def train(args):
         agent = DQNAgent(
             num_actions=env.num_actions,
             state_shape=env.state_shape[0],
-            mlp_layers=[64,128,64,32],
+            mlp_layers=[64,128,64,32], # test larger networks
             device=device,
         )
     elif args.algorithm == 'nfsp':
@@ -132,12 +132,12 @@ if __name__ == '__main__':
     parser.add_argument(
         '--num_episodes',
         type=int,
-        default=5000,
+        default=5000, # change for more epochs
     )
     parser.add_argument(
         '--num_eval_games',
         type=int,
-        default=2000,
+        default=2000, # change for better eval
     )
     parser.add_argument(
         '--evaluate_every',
