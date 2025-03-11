@@ -150,7 +150,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--log_dir',
         type=str,
-        default='experiments/leduc_holdem_dqn_result/',
+        default='experiments/bluffgame_dqn_result/',
     )
 
     args = parser.parse_args()
