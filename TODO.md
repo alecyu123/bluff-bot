@@ -9,4 +9,4 @@
 2. Understand how model training is implemented for agents
 3. Implement VAE_LSTM_NN_a/NN_s architecture into agent
 4. Understand how to train with intermediate multiple reward signal (parameter freezing, multiple loss functions targeted at different areas)
-5. Test agent against multitude of opponents (variety)
+5. Test agent against multitude of opponents (variety)  
