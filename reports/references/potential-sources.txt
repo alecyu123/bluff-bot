@@ -1,0 +1,2 @@
+1.	RLCard documentation, outlines set-up, included games, RL algorithsm
+	a. https://rlcard.org/index.html 

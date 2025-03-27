@@ -20,11 +20,14 @@ UofT ECE324 Project
 │
 ├── docs               <- A default mkdocs project; see www.mkdocs.org for details
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
+├── models             <- Finalized archite
 │
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+├── experiments        <- Main folder for the project. Experiments done to explore RLCard library, agent architectures 
+│                         (DQN/NN, etc.). Also results of said experiments
+|
+├── mod-RLCard         <- New game environments to focus exploration on partial information games and to better test
+|                         our agents (neural networks). BluffGame development here. Add this to your local RLCard
+|                         in the appropriate folders obtained from pip install RLCard
 │
 ├── pyproject.toml     <- Project configuration file with package metadata for 
 │                         simple-poker-bot and configuration for tools like black
@@ -38,23 +41,6 @@ UofT ECE324 Project
 │                         generated with `pip freeze > requirements.txt`
 │
 ├── setup.cfg          <- Configuration file for flake8
-│
-└── simple-poker-bot   <- Source code for use in this project.
-    │
-    ├── __init__.py             <- Makes simple-poker-bot a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
 ```
 
 --------
