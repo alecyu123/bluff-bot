@@ -64,6 +64,9 @@ class DQNAgent(object):
         Q-Learning algorithm for off-policy TD control using Function Approximation.
         Finds the optimal greedy policy while following an epsilon-greedy policy.
 
+        Note that the q-learning algorithm is most likely not the final algorithm that will be used.
+        Refer to report for justification due to model's inability to model stochastic decisions. 
+
         Args:
             replay_memory_size (int): Size of the replay memory
             replay_memory_init_size (int): Number of random experiences to sample when initializing
