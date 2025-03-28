@@ -32,7 +32,8 @@ class BluffJudger:
         if fold_count == (len(players) - 1):
             winners[alive_idx] = 1
         
-        
+        # Removed public card comparison logic
+
         # The winner player is the one with the highest card rank
         if sum(winners) < 1:
             max_rank = max(ranks)

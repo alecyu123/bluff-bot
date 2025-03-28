@@ -28,6 +28,7 @@ while (True):
     state = final_state['raw_obs']
     _action_list = []
     for i in range(1, len(action_record)+1):
+        print(state)
         if action_record[-i][0] == state['current_player']: # error here, no key current player for limit state.
             break
         _action_list.insert(0, action_record[-i])

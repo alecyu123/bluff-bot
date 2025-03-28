@@ -11,3 +11,5 @@ class BluffDealer(Dealer):
                      Card('H', 'A'), Card('H', '2'), Card('H', '3'), Card('H', '4'), Card('H', '5'), Card('H', '6'), Card('H', '7'), Card('H', '8'), Card('H', '9'), Card('H', 'T')]
         self.shuffle()
         self.pot = 0
+
+# Updated the deck

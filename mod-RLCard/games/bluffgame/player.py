@@ -23,6 +23,7 @@ class BluffPlayer:
         Returns:
             (dict): The state of the player
         '''
+        # removed public state from get_state method
         state = {}
         state['hand'] = self.hand.get_index()
         state['all_chips'] = all_chips

@@ -11,7 +11,7 @@ from rlcard.games.limitholdem import Game
 class BluffGame(Game):
 
     def __init__(self, allow_step_back=False, num_players=2):
-        ''' Initialize the class bluff-game Game
+        ''' Initialize the class bluffgame Game
         '''
         self.allow_step_back = allow_step_back
         self.np_random = np.random.RandomState()
