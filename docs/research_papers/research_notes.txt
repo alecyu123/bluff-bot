@@ -26,7 +26,7 @@ Problems w/ NE (https://www.scientificamerican.com/article/the-nash-equilibrium-
 *VERY simple example. If the behaviour of the opponent can be learned, the NE is no longer needed to exploit the opponent's mistakes 
 
 - This is how chess computers, including IBM's Deep Blue operate; they don't always search for an NE but try to exploit their opponent's mistakes 
-- This is an approach that our model would also like to incoperate
+- This is an approach that our model would also like to incorporate
 
 So our model
 - Encode the game/hidden state without using depth traversal or an extremely deep tree 

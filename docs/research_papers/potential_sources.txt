@@ -10,3 +10,4 @@ Imperfect-Information Games: https://arxiv.org/pdf/1805.08195
 
 On the encoding and solving partial information games: https://hal.science/hal-01790508/document
 
+Imperfect-Information Game AI Agent Based on Reinforcement Learning Using Tree Search and a Deep Neural Network: https://www.mdpi.com/2079-9292/12/11/2453#:~:text=Mahjong%2C%20which%20is%20a%20popular,and%20acts%20like%20real%20humans. 
