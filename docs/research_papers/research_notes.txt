@@ -1,0 +1,35 @@
+Depth-Limited Solving for Imperfect-Information Games
+- Previous models, such as liberatus (2017), have defeated top humans
+- Utilizes a tree, lookup table approach, requiring millions of core hours and terabytes of memory to calculate
+- For more complex games with deeper sequential tables, this method would not be realistic
+- Hints at the need for a computationally less expensive approach to solving hidden information games (which is why using an encoder decoder method could aid in the computation problem) 
+- The paper discusses the challenge of depth-limited solving in imperfect-information games, where optimal strategies cannot be determined by simply substituting equilibrium values at a depth limit. Using a Rock-Paper-Scissors+ (RPS+) example, the authors illustrate that assuming a fixed opponent strategy in a subgame leads to suboptimal decisions, as the opponent may adapt dynamically.
+
+- Instead of assigning a single value to states at the depth limit, the method allows the opponent to select a strategy at the depth boundary, influencing the game’s value beyond that point
+- The opponent does not select a strategy specific to each state individually, but the opponent must select a strategy for all states that are indistinguishable to them, simulating imperfect information
+- The paper outlines how if the opponent is offered a sufficient number of strategies, the Nash Equilibrium is maintained 
+- Experimentally found that even if a small number of strategies are offered, the method performs very strongly in practice.
+
+- For our purposes, the encoding of the states is key to our model. We (not sure) have adopted the method of considering the strategy that th opponent selects. However, other research has shown that Nash Equilibria may not always be present in all hidden information games, resulting in the need to use a method that is not just a traversal tree search
+
+Bayesian Nash Equilibrium
+- Under incomplete information games, BNE certainly exists 
+- A strategy profile (a set of strategies, one for each player) is a Bayesian Nash Equilibrium if, for every player i and for every possible type of player i, the strategy specified for that type maximizes the expected payoff of player i, given their beliefs about the types of the other players and the strategies they are playing.
+- In simpler terms, in a BNE, no player has an incentive to unilaterally change their strategy (for any of their possible types), given what they believe about the other players and how they expect them to play.
+- Research has shown that calculating a BNE is computationally exhaustive and unrealistic for most practical applications, hence an alternate approach must be used for our method 
+
+Problems w/ NE (https://www.scientificamerican.com/article/the-nash-equilibrium-is-the-optimal-poker-strategy-expert-players-dont-always-use-it) 
+- While playing the NE may be optimal, it might not take advantage of an opponents missteps
+- Consider a simple example of RPS, where the optimal strategy is to simply randomly choose any of the three examples
+- If the opponent announces that they're gonna play only paper, the optimal strategy is no longer optimal
+- However, if you only played the NE, you wouldn't be able to benefit from the altered strategy 
+*VERY simple example. If the behaviour of the opponent can be learned, the NE is no longer needed to exploit the opponent's mistakes 
+
+- This is how chess computers, including IBM's Deep Blue operate; they don't always search for an NE but try to exploit their opponent's mistakes 
+- This is an approach that our model would also like to incoperate
+
+So our model
+- Encode the game/hidden state without using depth traversal or an extremely deep tree 
+- Explicitly predict hidden states before choosing the action
+- Avoid searching for NE/BNE, computationally expensive and might not always be the right play
+- Exploit the mistakes/patterns of the opposing player 
