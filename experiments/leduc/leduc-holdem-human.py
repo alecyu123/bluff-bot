@@ -27,7 +27,10 @@ while (True):
     action_record = final_state['action_record']
     state = final_state['raw_obs']
     _action_list = []
+    print(_action_list)
+    print(state)
     for i in range(1, len(action_record)+1):
+        print(i)
         if action_record[-i][0] == state['current_player']:
             break
         _action_list.insert(0, action_record[-i])
