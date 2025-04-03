@@ -1,0 +1,17 @@
+
+Our Approach
+
+Before getting into our solutions to these issues, I think it's important to quickly explain our approach to coming up with these solutions. We believe that the key to building a good solution is to explore and understand the problem well enough that you can find insights from observation about the structure of the problem or instances of the problem (e.g. games or data) that allow you to form inductive biases that you can bake into your models, which will help it converge to the correct transformation of data faster.
+For our problem which is solving bluffgame, we made two crucial observations, namely that there is incomplete information and that the game can go on for a long time. From the first observation we hypothesized that our model would need to at least have an internal approximation of the true state of the game as well as an uncertainty of its approximation (kind of like a range of possible values) in order to make correct decisions. We also knew that our model shouldn’t determinisitically choose its actions. From the second observation we hypothesized that we might need to form a custom loss function that uses game structure to accelerate correct convergence since the number of possible action sequences is so large. These insights led us to build a model that combined two architectures, each of which leverages our unique inductive biases. It starts with an LSTM that takes in the current observation of another player’s actions as well as 2 previous vectors and also outputs 2 new vectors. This is where a VAE which is the last output layer of the LSTM comes in, as one of the 2 vectors encodes the mean prediction of the true state of the opponent hand strength, etc. and the other vector encodes the uncertainty around this mean. Finally, when it’s the models turn to play, the model uses a MLP to decode these vectors and finally samples from them to probabilistically return Q-values for each action, fully leveraging the incomplete information nature of the game.
+
+Model outcomes
+Currently, when we increase game length, our model gets better performance than a simple DQN.
+
+Our next step is to implement intermediate reward signals so essentially our custom loss function to penalize the model directly if the state it predicted is wrong to help accelerate convergence.
+
+
+
+Reflection
+
+Focus on the problem before randomly trying all sorts of tricks cause only by understanding the problem space can you know how to most effectively leverage the knowledge and techniques you have.
+
