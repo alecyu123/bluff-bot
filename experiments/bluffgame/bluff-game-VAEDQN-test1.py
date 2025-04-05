@@ -38,7 +38,6 @@ def train(args):
         agent = VAEDQNAgent(
             num_actions=env.num_actions,
             state_shape=env.state_shape[0],
-            mlp_layers=[64,128,64,32], # test larger networks
             device=device,
         )
     elif args.algorithm == 'nfsp':
@@ -102,6 +101,7 @@ if __name__ == '__main__':
         type=str,
         default='bluffgame',
         choices=[
+            'bluffgame',
             'blackjack',
             'leduc-holdem',
             'limit-holdem',
@@ -151,7 +151,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--log_dir',
         type=str,
-        default='experiments/bluffgame_dqn_result/',
+        default='experiments/bluffgame_vaedqn_result/',
     )
 
     args = parser.parse_args()

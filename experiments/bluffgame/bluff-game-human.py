@@ -10,10 +10,10 @@ from rlcard.utils import print_card
 # Make environment
 env = rlcard.make('bluffgame')
 human_agent = HumanAgent(env.num_actions)
-random_agent = RandomAgent(env.num_actions)
+human_agent2 = HumanAgent(env.num_actions)
 env.set_agents([
     human_agent,
-    random_agent,
+    human_agent2,
 ])
 
 print(">> Bluffgame Hold'em pre-trained model")
