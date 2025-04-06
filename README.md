@@ -9,38 +9,46 @@ UofT ECE324 Project
 ## Project Organization
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+├── docs               <- Documentation (brainstorming notes, research, and presentation slides)
+│   ├── brainstorming      <- Early planning and state representation pipeline diagrams
+│   ├── docs               <- documentation of important project milestones, refined ideas
+│   ├── research_papers    <- Useful research paper notes and summaries 
+│   └── slideshow          <- Presentation slides for ECE324
 │
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
+├── experiments        <- Exploration of RLCard, agent architectures (DQN, VAEDQN), and experiment results
+│   ├── blackjack          <- Blackjack game and agent exploration
+│   ├── bluffgame          <- DQN, VAEDQN, LSTMVAEDQN experiments and evaluation against random agents, human agents, each other
+│   ├── leduc              <- Leduc game and agent exploration
+│   └── limit              <- Texas Limit game and agent exploration
 │
-├── models             <- Finalized archite
-│
-├── experiments        <- Main folder for the project. Experiments done to explore RLCard library, agent architectures 
-│                         (DQN/NN, etc.). Also results of said experiments
-|
-├── mod-RLCard         <- New game environments to focus exploration on partial information games and to better test
-|                         our agents (neural networks). BluffGame development here. Add this to your local RLCard
-|                         in the appropriate folders obtained from pip install RLCard
-│
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         simple-poker-bot and configuration for tools like black
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+├── mod-RLCard         <- Modified RLCard environments and agents (please add these to the correct folders in your local RLCard Library)
+│   ├── agents             <- Custom agent implementations (e.g., modified DQN (VAEDQN))
+|   ├── env                <- environment wrapper around bluffgame needed for RLCard lib internal workings
+│   └── games
+│       └── bluffgame      <- Custom game bluffgame implementations
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
+|   ├── figures        <- Generated graphics and figures to be used in reporting
+│   └── references     <- Research papers referenced in reports  
 │
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+├── .gitignore         <- Specifies files and directories to ignore in version control
 │
-├── setup.cfg          <- Configuration file for flake8
+├── LICENSE            <- Open-source license if one is chosen
+│
+├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
+│
+├── README.md          <- The top-level README for developers using this project.
+│
+├── TODO.md            <- Task list and project planning notes
+│
+├── pyproject.toml     <- Project configuration file with package metadata and tool configs
+│
+├── requirements.txt   <- The requirements file for reproducing the analysis environment (includes RLCard)
+│
+├── setup.cfg          <- Configuration file for flake8 and other tools
+
+
+
 ```
 
 --------
