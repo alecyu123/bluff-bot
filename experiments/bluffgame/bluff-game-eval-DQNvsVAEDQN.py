@@ -6,6 +6,7 @@ import rlcard
 from rlcard.agents import (
     DQNAgent,
     RandomAgent,
+    VAEDQNAgent
 )
 from rlcard.utils import (
     get_device,
@@ -78,8 +79,8 @@ if __name__ == '__main__':
         '--models',
         nargs='*',
         default=[
-            'experiments/bluffgame_dqn_result/model.pth', 
-            'random',
+            'experiments/bluffgame_dqn_result2/model.pth', 
+            'experiments/bluffgame_vaedqn_result/model.pth',
         ],
     )
     parser.add_argument(
