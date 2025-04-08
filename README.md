@@ -21,12 +21,8 @@ UofT ECE324 Project
 │   ├── leduc              <- Leduc game and agent exploration
 │   └── limit              <- Texas Limit game and agent exploration
 │
-├── mod-RLCard         <- Modified RLCard environments and agents (please add these to the correct folders in your local RLCard 
-|   |                     Library)
-│   ├── agents             <- Custom agent implementations (e.g., modified DQN (VAEDQN))
-|   ├── env                <- environment wrapper around bluffgame needed for RLCard lib internal workings
-│   └── games
-│       └── bluffgame      <- Custom game bluffgame implementations
+├── mod-RLCard         <- Modified RLCard Library
+|   └── rlcard         <- New RLCard
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
 |   ├── figures        <- Generated graphics and figures to be used in reporting
@@ -48,9 +44,12 @@ UofT ECE324 Project
 │
 ├── setup.cfg          <- Configuration file for flake8 and other tools
 
-
-
 ```
 
 --------
 
+# Actions Required to Reproduce
+
+1. After pip installing RLCard, run the command pip show rlcard to find the location where you installed the library
+2. take the rlcard file inside the mod-RLCard folder, and replace the original rlcard file inside your pip library with this modified version
+3. You can now reproduce all experiments inside the experiments folder by just running them (you can change the default arguments).
