@@ -3,16 +3,8 @@ import argparse
 import torch
 
 import rlcard
-from rlcard.agents import (
-    DQNAgent,
-    RandomAgent,
-    VAEDQNAgent
-)
-from rlcard.utils import (
-    get_device,
-    set_seed,
-    tournament,
-)
+from rlcard.agents import DQNAgent, RandomAgent, VAEDQNAgent
+from rlcard.utils import get_device, set_seed, tournament
 
 def load_model(model_path, env=None, position=None, device=None):
     if os.path.isfile(model_path):  # Torch model

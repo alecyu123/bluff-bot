@@ -76,14 +76,12 @@ def get_agent_name(raw_name):
     if 'vaedqn' in raw_name.lower():
         return 'VAEDQN'
     elif 'dqn' in raw_name.lower():
-        # *** ADDED PRINT ***
         print(f"DEBUG: Found 'dqn' in '{raw_name}', assigning name 'DQN'")
         return 'DQN'
     elif 'random' in raw_name.lower():
         return 'Random'
     elif 'aggro' in raw_name.lower():
         return 'Aggro'
-    # *** ADDED PRINT ***
     print(f"DEBUG: Raw name '{raw_name}' did not match known patterns, using raw name.")
     return raw_name # Fallback if name doesn't match known patterns
 
@@ -102,7 +100,6 @@ blocks = data.strip().split('\n\n') # Assuming blank lines separate matchups
 
 print("--- Parsing Matchups ---")
 for i, block in enumerate(blocks):
-    # print(f"Processing Block {i+1}...") # Reduced verbosity slightly
     lines = block.strip().split('\n')
     agent0_name_raw = None
     agent1_name_raw = None
@@ -135,14 +132,13 @@ for i, block in enumerate(blocks):
                 print(f"  Warning: Could not parse Player 1 actions: {e} in block {i+1}")
 
     # Process the extracted info for this block if valid
-    if all([agent0_name_raw, agent1_name_raw, payoff0 is not None, payoff1 is not None, actions0_dict, actions1_dict]):
+    if all([agent0_name_raw, agent1_name_raw, payoff0 is not None, payoff1 is not None, 
+            actions0_dict, actions1_dict]):
         agent0_name = get_agent_name(agent0_name_raw)
         agent1_name = get_agent_name(agent1_name_raw)
-        # *** ADDED PRINT ***
         print(f"  Processed Block {i+1}: Agent0='{agent0_name}', Agent1='{agent1_name}'")
         if 'DQN' in [agent0_name, agent1_name]:
              print(f"    *** DQN detected in this matchup! ***")
-
 
         # Aggregate payoffs
         agent_payoffs[agent0_name].append(payoff0)
@@ -158,13 +154,14 @@ print("--- Parsing Complete ---")
 # --- Data Preparation and Calculation ---
 
 # Calculate average payoffs
-avg_payoffs = {agent: sum(payoffs) / len(payoffs) if payoffs else 0
-               for agent, payoffs in agent_payoffs.items()}
+avg_payoffs = {
+    agent: sum(payoffs) / len(payoffs) if payoffs else 0
+    for agent, payoffs in agent_payoffs.items()
+}
 
 # Prepare data for plotting
 # Get agents present in the action counts (should include all agents with data)
 agents = sorted(list(agent_action_counts.keys()))
-# *** ADDED PRINT ***
 print(f"\nDEBUG: Agents found after parsing: {agents}")
 if 'DQN' not in agents and len(agent_payoffs.get('DQN', [])) > 0:
     print("\n*** CRITICAL DEBUG: 'DQN' has payoff data but is NOT in action count keys! Check parsing. ***\n")
@@ -235,7 +232,6 @@ index = np.arange(n_actions) # x locations for groups
 fig2, ax2 = plt.subplots(figsize=(12, 7))
 
 for i, agent in enumerate(agents):
-    # *** ADDED PRINT ***
     print(f"  Plotting actions for: {agent}")
     if agent == 'DQN':
         print(f"    DEBUG: DQN action counts being plotted: {agent_action_counts.get('DQN', Counter())}")
@@ -264,10 +260,10 @@ fig3, ax3 = plt.subplots(figsize=(10, 7))
 if 'DQN' in agents:
      print(f"  DEBUG: Data for DQN in boxplot: {agent_payoffs.get('DQN', [])}")
 
-bp = ax3.boxplot(payoffs_for_boxplot, labels=agents, patch_artist=True, showmeans=True,
-                 meanprops={"marker":"D", "markerfacecolor":"white",
-                           "markeredgecolor":"black", "markersize":"8"},
-                 medianprops={"color":"black", "linewidth":1.5})
+bp = ax3.boxplot(
+    payoffs_for_boxplot, labels=agents, patch_artist=True, showmeans=True,
+    meanprops={"marker":"D", "markerfacecolor":"white", "markeredgecolor":"black", "markersize":"8"},
+    medianprops={"color":"black", "linewidth":1.5})
 
 box_colors = [agent_colors(i/n_agents) for i in range(n_agents)]
 for patch, color in zip(bp['boxes'], box_colors):
@@ -284,7 +280,6 @@ ax3.grid(axis='y', linestyle='--', alpha=0.7)
 print("Plotting: Strip Plot Payoffs...")
 fig4, ax4 = plt.subplots(figsize=(10, 7))
 
-# *** ADDED PRINT ***
 if 'DQN' in df_payoffs['Agent'].unique():
     print(f"  DEBUG: DataFrame contains DQN data for stripplot.")
     print(df_payoffs[df_payoffs['Agent'] == 'DQN'].head()) # Show first few rows for DQN

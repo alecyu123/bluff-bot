@@ -4,16 +4,8 @@ import torch
 from collections import Counter, defaultdict
 
 import rlcard
-from rlcard.agents import (
-    DQNAgent,
-    RandomAgent,
-    VAEDQNAgent
-)
-from rlcard.utils import (
-    get_device,
-    set_seed,
-    tournament_with_traj,
-)
+from rlcard.agents import DQNAgent, RandomAgent, VAEDQNAgent
+from rlcard.utils import get_device, set_seed, tournament_with_traj
 
 def load_model(model_path, env=None, position=None, device=None):
     if os.path.isfile(model_path):  # Torch model

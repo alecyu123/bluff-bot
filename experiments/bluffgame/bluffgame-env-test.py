@@ -9,9 +9,7 @@ def run(args):
     # Make environment
     env = rlcard.make(
         args.env,
-        config={
-            'seed': 42,
-        }
+        config={'seed': 42}
     )
 
     # Seed numpy, torch, random

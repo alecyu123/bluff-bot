@@ -16,6 +16,7 @@ from rlcard.utils import (
     Logger,
     plot_curve,
 )
+
 def train(args):
 
     # Check whether gpu is available
@@ -49,6 +50,15 @@ def train(args):
             q_mlp_layers=[64,64],
             device=device,
         )
+    else:
+        from rlcard.agents import DQNAgent
+        agent = DQNAgent(
+            num_actions=env.num_actions,
+            state_shape=env.state_shape[0],
+            mlp_layers=[64, 64],
+            device=device,
+        )
+
     agents = [agent]
     for _ in range(1, env.num_players):
         agents.append(RandomAgent(num_actions=env.num_actions))
