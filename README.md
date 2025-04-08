@@ -49,7 +49,7 @@ UofT ECE324 Project
 4. To find all the files changed inside the original rlcard, you can open your new library and look through anything that references bluffgame (see below for new).
 
 # Changed rlcard Directory and files
-
+```
 ├───__init__.py
 │
 ├───agents
@@ -155,3 +155,4 @@ UofT ECE324 Project
 │   ├───seeding.py
 │   ├───utils.py                            <--- changed
 │   ├───__init__.py                         <--- changed
+```
