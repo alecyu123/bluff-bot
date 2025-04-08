@@ -79,65 +79,74 @@ UofT ECE324 Project
 │
 ├───envs
 │   ├───blackjack.py
-│   ├───bluffgame.py                         <--- new
+│   ├───bluffgame.py                        <--- new
 │   ├───bridge.py
 │   ├───doudizhu.py
-│   ├───env.py                               <--- changed
+│   ├───env.py                              <--- changed
 │   ├───gin_rummy.py
 │   ├───leducholdem.py
 │   ├───limitholdem.py
 │   ├───mahjong.py
 │   ├───nolimitholdem.py
-│   ├───registration.py                      <--- changed
+│   ├───registration.py                     <--- changed
 │   ├───uno.py
-│   ├───__init__.py                          <--- changed
+│   ├───__init__.py                         <--- changed
 │
 ├───games
 │   ├───base.py
-│   ├───__init__.py                          <--- changed
+│   ├───__init__.py                         <--- changed
 │   │
 │   ├───blackjack
 │   │   ...
 │   │
-│   ├───bluffgame                            <--- new
-│   │   ├───card2index.json                  <--- new
-│   │   ├───dealer.py                        <--- new
-│   │   ├───game.py                          <--- new
-│   │   ├───judger.py                        <--- new
-│   │   ├───player.py                        <--- new
-│   │   ├───round.py                         <--- new
-│   │   ├───__init__.py                      <--- new
+│   ├───bluffgame                           <--- new
+│   │   ├───card2index.json                 <--- new
+│   │   ├───dealer.py                       <--- new
+│   │   ├───game.py                         <--- new
+│   │   ├───judger.py                       <--- new
+│   │   ├───player.py                       <--- new
+│   │   ├───round.py                        <--- new
+│   │   ├───__init__.py                     <--- new
 │   │
 │   ├───bridge
-│   |   ...
+│   │   ...
+│   │
 │   ├───doudizhu
-|   |   ...
+│   │   ...
+│   │
 │   ├───gin_rummy
-│   |   ...
+│   │   ...
+│   │
 │   ├───leducholdem
-│   |   ...
+│   │   ...
+│   │
 │   ├───limitholdem
-│   |   ...
+│   │   ...
+│   │
 │   ├───mahjong
-│   |   ...
+│   │   ...
+│   │
 │   ├───nolimitholdem
-│   |   ...
+│   │   ...
+│   │
 │   ├───uno
-│   |   ...
+│   │   ...
+│
 ├───models
 │   ├───bridge_rule_models.py
 │   ├───doudizhu_rule_models.py
 │   ├───gin_rummy_rule_models.py
 │   ├───leducholdem_rule_models.py
 │   ├───limitholdem_rule_models.py
-│   ├───model.py                             <--- new
+│   ├───model.py                            <--- new
 │   ├───pretrained_models.py
-│   ├───registration.py                      <--- new
+│   ├───registration.py                     <--- new
 │   ├───uno_rule_models.py
-│   ├───__init__.py                          <--- new
+│   ├───__init__.py                         <--- new
 │   │
 │   ├───pretrained
-│   |   ...
+│   │   ...
+│
 ├───saved_models
 │
 ├───utils
