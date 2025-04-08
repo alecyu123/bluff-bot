@@ -15,33 +15,26 @@ UofT ECE324 Project
 │   ├── research_papers    <- Useful research paper notes and summaries 
 │   └── slideshow          <- Presentation slides for ECE324
 │
-├── experiments        <- Exploration of RLCard, agent architectures (DQN, VAEDQN), and experiment results
+├── mod-RLCard         <- Modified RLCard Library
+│   └── rlcard         <- New RLCard
+│
+├── simulations        <- Exploration of RLCard, agent architectures (DQN, VAEDQN), and experiment results
 │   ├── blackjack          <- Blackjack game and agent exploration
 │   ├── bluffgame          <- DQN, VAEDQN, LSTMVAEDQN experiments and evaluation against random agents, human agents, each other
 │   ├── leduc              <- Leduc game and agent exploration
 │   └── limit              <- Texas Limit game and agent exploration
 │
-├── mod-RLCard         <- Modified RLCard Library
-|   └── rlcard         <- New RLCard
-│
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-|   ├── figures        <- Generated graphics and figures to be used in reporting
+│   ├── figures        <- Generated graphics and figures to be used in reporting
 │   └── references     <- Research papers referenced in reports  
 │
 ├── .gitignore         <- Specifies files and directories to ignore in version control
-│
 ├── LICENSE            <- Open-source license if one is chosen
-│
 ├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-│
 ├── README.md          <- The top-level README for developers using this project.
-│
 ├── TODO.md            <- Task list and project planning notes
-│
 ├── pyproject.toml     <- Project configuration file with package metadata and tool configs
-│
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment (includes RLCard)
-│
 ├── setup.cfg          <- Configuration file for flake8 and other tools
 
 ```
