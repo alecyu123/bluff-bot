@@ -24,9 +24,7 @@ def train(args):
     # Make the environment with seed
     env = rlcard.make(
         args.env,
-        config={
-            'seed': args.seed,
-        }
+        config={'seed': args.seed}
     )
 
     # Initialize the agent and use random agents as opponents
@@ -47,6 +45,9 @@ def train(args):
             q_mlp_layers=[64,64],
             device=device,
         )
+    else:
+        raise ValueError("Unsupported algorithm: {}".format(args.algorithm))
+    
     agents = [agent]
     for _ in range(1, env.num_players):
         agents.append(RandomAgent(num_actions=env.num_actions))

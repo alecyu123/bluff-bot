@@ -10,10 +10,7 @@ from rlcard.utils import print_card
 env = rlcard.make('leduc-holdem')
 human_agent = HumanAgent(env.num_actions)
 cfr_agent = models.load('leduc-holdem-cfr').agents[0]
-env.set_agents([
-    human_agent,
-    cfr_agent,
-])
+env.set_agents([human_agent, cfr_agent,])
 
 print(">> Leduc Hold'em pre-trained model")
 
@@ -29,11 +26,13 @@ while (True):
     _action_list = []
     print(_action_list)
     print(state)
+
     for i in range(1, len(action_record)+1):
         print(i)
         if action_record[-i][0] == state['current_player']:
             break
         _action_list.insert(0, action_record[-i])
+        
     for pair in _action_list:
         print('>> Player', pair[0], 'chooses', pair[1])
 
