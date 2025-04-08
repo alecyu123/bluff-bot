@@ -1,0 +1,59 @@
+0 experiments/bluffgame_dqn_vs_vaedqn_mutual_eval_v5/model_vaedqn_final.pth 1.4654
+1 experiments/bluffgame_dqn_vs_vaedqn_mutual_eval_v5/model_dqn_final.pth -1.4654
+--- Overall Action Distributions ---
+Player 0: {'raise': 22008, 'call': 11994, 'fold': 2076, 'check': 996}
+Player 1: {'raise': 28838, 'call': 5616, 'check': 484}
+
+--- First Move Action Distributions (When Player X Moves First) ---
+Player 0 (when first): {'raise': 5040}
+Player 1 (when first): {'raise': 4454, 'call': 506}
+
+0 experiments/bluffgame_dqn_vs_vaedqn_mutual_eval_v5/model_vaedqn_final.pth 1.44005
+1 random -1.44005
+--- Overall Action Distributions ---
+Player 0: {'raise': 12176, 'check': 1713, 'call': 2756, 'fold': 633}
+Player 1: {'fold': 6854, 'call': 5763, 'check': 1218, 'raise': 6962}
+
+--- First Move Action Distributions (When Player X Moves First) ---
+Player 0 (when first): {'raise': 5040}
+Player 1 (when first): {'call': 1663, 'fold': 1613, 'raise': 1684}
+
+0 experiments/bluffgame_dqn_vs_vaedqn_mutual_eval_v5/model_vaedqn_final.pth 0.7312
+1 aggro -0.7312
+--- Overall Action Distributions ---
+Player 0: {'raise': 27385, 'call': 16911, 'fold': 515, 'check': 1043}
+Player 1: {'raise': 31329, 'check': 9485, 'call': 1016}
+
+--- First Move Action Distributions (When Player X Moves First) ---
+Player 0 (when first): {'raise': 5040}
+Player 1 (when first): {'raise': 4960}
+
+0 experiments/bluffgame_dqn_vs_vaedqn_mutual_eval_v5/model_dqn_final.pth 1.6905
+1 random -1.6905
+--- Overall Action Distributions ---
+Player 0: {'raise': 14615, 'call': 1828, 'check': 1289, 'fold': 59}
+Player 1: {'fold': 7473, 'call': 6727, 'raise': 7073, 'check': 891}
+
+--- First Move Action Distributions (When Player X Moves First) ---
+Player 0 (when first): {'raise': 4581, 'call': 459}
+Player 1 (when first): {'call': 1669, 'fold': 1628, 'raise': 1663}
+
+0 experiments/bluffgame_dqn_vs_vaedqn_mutual_eval_v5/model_dqn_final.pth -0.2484
+1 aggro 0.2484
+--- Overall Action Distributions ---
+Player 0: {'raise': 43142, 'call': 11487}
+Player 1: {'raise': 39589, 'call': 8513, 'check': 5419}
+
+--- First Move Action Distributions (When Player X Moves First) ---
+Player 0 (when first): {'raise': 4581, 'call': 459}
+Player 1 (when first): {'raise': 4960}
+
+0 random -1.529
+1 aggro 1.529
+--- Overall Action Distributions ---
+Player 0: {'fold': 7251, 'call': 5720, 'check': 1757, 'raise': 7123}
+Player 1: {'raise': 11695, 'check': 5542, 'call': 388}
+
+--- First Move Action Distributions (When Player X Moves First) ---
+Player 0 (when first): {'fold': 1642, 'call': 1709, 'raise': 1689}
+Player 1 (when first): {'raise': 4960}

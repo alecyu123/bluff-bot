@@ -1,0 +1,9 @@
+0 experiments/bluffgame_dqn_vs_vaedqn_mutual_eval_v3/model_vaedqn_final.pth 2.0631
+1 experiments/bluffgame_dqn_vs_vaedqn_mutual_eval_v3/model_dqn_final.pth -2.0631
+--- Overall Action Distributions ---
+Player 0: {'call': 6938, 'check': 2919, 'raise': 34765}
+Player 1: {'check': 4940, 'call': 14235, 'raise': 27927}
+
+--- First Move Action Distributions (When Player X Moves First) ---
+Player 0 (when first): {'call': 2056, 'raise': 2984}
+Player 1 (when first): {'call': 3436, 'raise': 1524}

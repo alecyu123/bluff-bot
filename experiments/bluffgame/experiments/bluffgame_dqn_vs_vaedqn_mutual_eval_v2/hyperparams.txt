@@ -1,0 +1,10 @@
+    agent_dqn = StandardDQNAgent(
+        num_actions=num_actions, state_shape=state_shape,
+        mlp_layers=[64, 64], device=device, learning_rate=0.0001,
+    )
+    agent_vaedqn = VAEDQNAgent(
+        num_actions=num_actions, state_shape=state_shape,
+        lstm_hidden_size=64, latent_dim=20, kld_weight=0.005,
+        learning_rate=0.0005, device=device,
+    )
+    agent_random = RandomAgent(num_actions=num_actions)

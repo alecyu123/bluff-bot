@@ -1,0 +1,7 @@
+--- Overall Action Distributions ---
+Player 0: {'call': 8026, 'raise': 32076}
+Player 1: {'check': 1446, 'raise': 29177, 'fold': 899, 'call': 12244}
+
+--- First Move Action Distributions (When Player X Moves First) ---
+Player 0 (when first): {'call': 1579, 'raise': 3461}
+Player 1 (when first): {'raise': 4471, 'call': 489}
