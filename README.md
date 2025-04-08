@@ -21,7 +21,8 @@ UofT ECE324 Project
 │   ├── leduc              <- Leduc game and agent exploration
 │   └── limit              <- Texas Limit game and agent exploration
 │
-├── mod-RLCard         <- Modified RLCard environments and agents (please add these to the correct folders in your local RLCard Library)
+├── mod-RLCard         <- Modified RLCard environments and agents (please add these to the correct folders in your local RLCard 
+|   |                     Library)
 │   ├── agents             <- Custom agent implementations (e.g., modified DQN (VAEDQN))
 |   ├── env                <- environment wrapper around bluffgame needed for RLCard lib internal workings
 │   └── games
