@@ -18,7 +18,7 @@ UofT ECE324 Project
 ├── mod-RLCard         <- Modified RLCard Library
 │   └── rlcard         <- New RLCard
 │
-├── simulations        <- Exploration of RLCard, agent architectures (DQN, VAEDQN), and experiment results
+├── simulations        <- Exploration of RLCard, agent architectures (DQN, VAEDQN), and experiment results (run the experiments folder in bluffgame to reproduce results!)
 │   ├── blackjack          <- Blackjack game and agent exploration
 │   ├── bluffgame          <- DQN, VAEDQN, LSTMVAEDQN experiments and evaluation against random agents, human agents, each other
 │   ├── leduc              <- Leduc game and agent exploration
